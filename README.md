@@ -1,4 +1,4 @@
-# JavaDBImpl
+# JavaDBMS
 
 A lightweight, in-memory relational algebra engine in Java, built as part of a Database Management class.
 
