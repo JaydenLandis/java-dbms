@@ -22,6 +22,7 @@ public class Driver {
 
         // List names of students(who have taken 0 credits) and their advisors.
         // Return student names, advisor names, and total credits taken by the student.
+        System.out.println("Query the names of students who have taken no credits along with their advisors:");
         query();
     }
 
@@ -31,20 +32,20 @@ public class Driver {
                         .attributeNames(List.of("ID", "Name", "Dept", "Salary"))
                         .attributeTypes(List.of(Type.INTEGER, Type.STRING, Type.STRING, Type.DOUBLE))
                         .build();
-                instructor.loadData("C:/Users/landi/OneDrive/Desktop/UgaCS/4370/ICA2/mysql-files/instructor_export.csv");
+                instructor.loadData("data/instructor_export.csv");
                 
                 Relation student = new RelationBuilder()
                         .attributeNames(List.of("ID", "name", "dept_name", "tot_cred"))
                         .attributeTypes(List.of(Type.INTEGER, Type.STRING, Type.STRING, Type.INTEGER))
                         .build();
-                student.loadData("C:/Users/landi/OneDrive/Desktop/UgaCS/4370/ICA2/mysql-files/student_export.csv");
+                student.loadData("data/student_export.csv");
 
                 
                 Relation advisor = new RelationBuilder()
                         .attributeNames(List.of("s_ID", "i_ID"))
                         .attributeTypes(List.of(Type.INTEGER, Type.INTEGER))
                         .build();
-                advisor.loadData("C:/Users/landi/OneDrive/Desktop/UgaCS/4370/ICA2/mysql-files/advisor.csv");
+                advisor.loadData("data/advisor.csv");
 
                 RAimpl DB = new RAimpl();
 
