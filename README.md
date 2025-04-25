@@ -1,2 +1,1 @@
-# java-dbms
-Java database management system
+# CSCI4370 Project 
